@@ -36,11 +36,6 @@ module top #(
     input  wire rx_data
 );
     wire axis_clk;
-    
-//    wire [23:0] axis_tx_data;
-//    wire axis_tx_valid;
-//    wire axis_tx_ready;
-    
 	wire resetn = (reset == RESET_POLARITY) ? 1'b0 : 1'b1;
 	
     clk_wiz_0 m_clk (
@@ -48,16 +43,13 @@ module top #(
         .axis_clk(axis_clk)
     );
     
-    reg [47:0] dds_out_data = 0;
-//    reg axis_tx_valid = 1;
-//    reg axis_tx_last = 0;
-    wire[47:0] dds_out;
+//    reg [47:0] dds_out_data = 0;
+//    wire[47:0] dds_out;
     
-    dds_compiler_0 dds(
-        .aclk(axis_clk),
-        .m_axis_data_tdata(dds_out)
-    );  
-    
+//    dds_compiler_0 dds(
+//        .aclk(axis_clk),
+//        .m_axis_data_tdata(dds_out)
+//    );      
 //    always @(posedge axis_clk)
 //    begin
 //        if (axis_tx_ready)
@@ -86,11 +78,6 @@ module top #(
     wire axis_rx_last;
     
     
-    assign axis_tx_data = axis_rx_data;
-    assign axis_tx_last = axis_rx_last;
-    assign axis_rx_ready = axis_tx_ready;
-    assign axis_tx_valid = axis_rx_valid;
-    
 
     axis_i2s2 m_i2s2 (
         .axis_clk(axis_clk),
@@ -116,5 +103,23 @@ module top #(
         .rx_sclk(rx_sclk),
         .rx_sdin(rx_data)        
     );
+    
+    
+    ddc m_ddc(
+        .clk(clk),
+        .axis_clk(axis_clk),
+        
+        .s_axis_data(axis_rx_data),
+        .s_axis_valid(axis_rx_valid),
+        .s_axis_ready(axis_rx_ready),
+        .s_axis_last(axis_rx_last),
+        
+        .m_axis_data(axis_tx_data),
+        .m_axis_valid(axis_tx_valid),
+        .m_axis_ready(axis_tx_ready),
+        .m_axis_last(axis_tx_last)        
+    );
+    
+    
     
 endmodule

@@ -1,0 +1,306 @@
+
+*** Running vivado
+    with args -log reciever_axis_dwidth_converter_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source reciever_axis_dwidth_converter_0_0.tcl
+
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source reciever_axis_dwidth_converter_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1320.598 ; gain = 0.027 ; free physical = 199 ; free virtual = 9851
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: reciever_axis_dwidth_converter_0_0
+Command: synth_design -top reciever_axis_dwidth_converter_0_0 -part xc7s50csga324-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 78950
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 2050.195 ; gain = 401.660 ; free physical = 185 ; free virtual = 5369
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'reciever_axis_dwidth_converter_0_0' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_axis_dwidth_converter_0_0/synth/reciever_axis_dwidth_converter_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'axis_dwidth_converter_v1_1_28_axis_dwidth_converter' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/0a68/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:806]
+INFO: [Synth 8-6157] synthesizing module 'axis_dwidth_converter_v1_1_28_axisc_downsizer' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/0a68/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'axis_dwidth_converter_v1_1_28_axisc_downsizer' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/0a68/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-6157] synthesizing module 'axis_register_slice_v1_1_29_axis_register_slice' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/af18/hdl/axis_register_slice_v1_1_vl_rfs.v:2830]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_1_util_axis2vector' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v:805]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_1_util_axis2vector' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v:805]
+INFO: [Synth 8-6157] synthesizing module 'axis_register_slice_v1_1_29_axisc_register_slice' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/af18/hdl/axis_register_slice_v1_1_vl_rfs.v:1929]
+INFO: [Synth 8-6155] done synthesizing module 'axis_register_slice_v1_1_29_axisc_register_slice' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/af18/hdl/axis_register_slice_v1_1_vl_rfs.v:1929]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_1_util_vector2axis' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_1_util_vector2axis' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axis_register_slice_v1_1_29_axis_register_slice' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/af18/hdl/axis_register_slice_v1_1_vl_rfs.v:2830]
+INFO: [Synth 8-6157] synthesizing module 'axis_register_slice_v1_1_29_axis_register_slice__parameterized0' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/af18/hdl/axis_register_slice_v1_1_vl_rfs.v:2830]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_1_util_axis2vector__parameterized0' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v:805]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_1_util_axis2vector__parameterized0' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v:805]
+INFO: [Synth 8-6157] synthesizing module 'axis_register_slice_v1_1_29_axisc_register_slice__parameterized0' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/af18/hdl/axis_register_slice_v1_1_vl_rfs.v:1929]
+INFO: [Synth 8-6155] done synthesizing module 'axis_register_slice_v1_1_29_axisc_register_slice__parameterized0' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/af18/hdl/axis_register_slice_v1_1_vl_rfs.v:1929]
+INFO: [Synth 8-6157] synthesizing module 'axis_infrastructure_v1_1_1_util_vector2axis__parameterized0' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_1_util_vector2axis__parameterized0' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/434f/hdl/axis_infrastructure_v1_1_vl_rfs.v:986]
+INFO: [Synth 8-6155] done synthesizing module 'axis_register_slice_v1_1_29_axis_register_slice__parameterized0' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/af18/hdl/axis_register_slice_v1_1_vl_rfs.v:2830]
+INFO: [Synth 8-6155] done synthesizing module 'axis_dwidth_converter_v1_1_28_axis_dwidth_converter' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/0a68/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:806]
+INFO: [Synth 8-6155] done synthesizing module 'reciever_axis_dwidth_converter_0_0' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_axis_dwidth_converter_0_0/synth/reciever_axis_dwidth_converter_0_0.v:53]
+WARNING: [Synth 8-3301] Unused top level parameter/generic RESET_POLARITY
+WARNING: [Synth 8-3301] Unused top level parameter/generic NUMBER_OF_SWITCHES
+WARNING: [Synth 8-7129] Port ACLK in module axis_register_slice_v1_1_29_axisc_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK2X in module axis_register_slice_v1_1_29_axisc_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module axis_register_slice_v1_1_29_axisc_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLKEN in module axis_register_slice_v1_1_29_axisc_register_slice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TSTRB[2] in module axis_infrastructure_v1_1_1_util_axis2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TSTRB[1] in module axis_infrastructure_v1_1_1_util_axis2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TSTRB[0] in module axis_infrastructure_v1_1_1_util_axis2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TID[0] in module axis_infrastructure_v1_1_1_util_axis2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TDEST[0] in module axis_infrastructure_v1_1_1_util_axis2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TUSER[2] in module axis_infrastructure_v1_1_1_util_axis2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TUSER[1] in module axis_infrastructure_v1_1_1_util_axis2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TUSER[0] in module axis_infrastructure_v1_1_1_util_axis2vector__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK in module axis_register_slice_v1_1_29_axisc_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLK2X in module axis_register_slice_v1_1_29_axisc_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ARESET in module axis_register_slice_v1_1_29_axisc_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLKEN in module axis_register_slice_v1_1_29_axisc_register_slice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TSTRB[5] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TSTRB[4] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TSTRB[3] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TSTRB[2] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TSTRB[1] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TSTRB[0] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TID[0] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TDEST[0] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TUSER[5] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TUSER[4] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TUSER[3] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TUSER[2] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TUSER[1] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port TUSER[0] in module axis_infrastructure_v1_1_1_util_axis2vector is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep[5] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep[4] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep[3] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep[2] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep[1] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep[0] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tuser[0] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 2133.133 ; gain = 484.598 ; free physical = 266 ; free virtual = 5105
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 2147.977 ; gain = 499.441 ; free physical = 234 ; free virtual = 5102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 2147.977 ; gain = 499.441 ; free physical = 234 ; free virtual = 5103
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2147.977 ; gain = 0.000 ; free physical = 220 ; free virtual = 5079
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_axis_dwidth_converter_0_0/reciever_axis_dwidth_converter_0_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_axis_dwidth_converter_0_0/reciever_axis_dwidth_converter_0_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/reciever_axis_dwidth_converter_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/reciever_axis_dwidth_converter_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2284.727 ; gain = 0.000 ; free physical = 258 ; free virtual = 4927
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2284.762 ; gain = 0.000 ; free physical = 256 ; free virtual = 4926
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 2284.762 ; gain = 636.227 ; free physical = 197 ; free virtual = 4846
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 2284.762 ; gain = 636.227 ; free physical = 197 ; free virtual = 4846
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  /home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/reciever_axis_dwidth_converter_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 2284.762 ; gain = 636.227 ; free physical = 194 ; free virtual = 4842
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'state_reg' through user attribute
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 2284.762 ; gain = 636.227 ; free physical = 193 ; free virtual = 4856
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    1 Bit       Adders := 1     
++---Registers : 
+	               48 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	                6 Bit    Registers := 3     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 11    
++---Muxes : 
+	   4 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port s_axis_tstrb[5] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tstrb[4] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tstrb[3] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tstrb[2] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tstrb[1] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tstrb[0] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep[5] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep[4] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep[3] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep[2] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep[1] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tkeep[0] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tid[0] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tdest[0] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_tuser[0] in module axis_dwidth_converter_v1_1_28_axis_dwidth_converter is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:30 . Memory (MB): peak = 2284.762 ; gain = 636.227 ; free physical = 216 ; free virtual = 4686
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 2284.762 ; gain = 636.227 ; free physical = 301 ; free virtual = 4490
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 2284.762 ; gain = 636.227 ; free physical = 301 ; free virtual = 4472
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 2284.762 ; gain = 636.227 ; free physical = 301 ; free virtual = 4472
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:47 . Memory (MB): peak = 2284.762 ; gain = 636.227 ; free physical = 389 ; free virtual = 4525
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:47 . Memory (MB): peak = 2284.762 ; gain = 636.227 ; free physical = 388 ; free virtual = 4524
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:47 . Memory (MB): peak = 2284.762 ; gain = 636.227 ; free physical = 388 ; free virtual = 4530
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:47 . Memory (MB): peak = 2284.762 ; gain = 636.227 ; free physical = 387 ; free virtual = 4531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:47 . Memory (MB): peak = 2284.762 ; gain = 636.227 ; free physical = 384 ; free virtual = 4533
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:47 . Memory (MB): peak = 2284.762 ; gain = 636.227 ; free physical = 381 ; free virtual = 4532
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |     1|
+|3     |LUT3 |    25|
+|4     |LUT4 |     1|
+|5     |LUT6 |     4|
+|6     |FDRE |    79|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:47 . Memory (MB): peak = 2284.762 ; gain = 636.227 ; free physical = 374 ; free virtual = 4527
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:44 . Memory (MB): peak = 2284.762 ; gain = 499.441 ; free physical = 364 ; free virtual = 4513
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:48 . Memory (MB): peak = 2284.762 ; gain = 636.227 ; free physical = 364 ; free virtual = 4514
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2284.762 ; gain = 0.000 ; free physical = 313 ; free virtual = 4517
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2284.762 ; gain = 0.000 ; free physical = 1036 ; free virtual = 5269
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 49146121
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 55 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:53 . Memory (MB): peak = 2284.762 ; gain = 964.164 ; free physical = 1018 ; free virtual = 5252
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1623.955; main = 1350.418; forked = 290.072
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3224.410; main = 2284.730; forked = 971.695
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2308.738 ; gain = 0.000 ; free physical = 1025 ; free virtual = 5259
+INFO: [Common 17-1381] The checkpoint '/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/reciever_axis_dwidth_converter_0_0_synth_1/reciever_axis_dwidth_converter_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP reciever_axis_dwidth_converter_0_0, cache-ID = a5ccaed34092d6a6
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2308.738 ; gain = 0.000 ; free physical = 938 ; free virtual = 5229
+INFO: [Common 17-1381] The checkpoint '/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/reciever_axis_dwidth_converter_0_0_synth_1/reciever_axis_dwidth_converter_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file reciever_axis_dwidth_converter_0_0_utilization_synth.rpt -pb reciever_axis_dwidth_converter_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat May  4 19:34:01 2024...

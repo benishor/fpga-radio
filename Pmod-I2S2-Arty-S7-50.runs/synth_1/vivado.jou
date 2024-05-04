@@ -3,12 +3,12 @@
 # SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
 # IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
 # SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
-# Start of session at: Sat May  4 12:51:24 2024
-# Process ID: 31446
+# Start of session at: Sat May  4 20:14:07 2024
+# Process ID: 106571
 # Current directory: /home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/synth_1
-# Command line: vivado -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: /home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/synth_1/top.vds
+# Command line: vivado -log reciever_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source reciever_wrapper.tcl
+# Log file: /home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/synth_1/reciever_wrapper.vds
 # Journal file: /home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/synth_1/vivado.jou
-# Running On: acidrain, OS: Linux, CPU Frequency: 3192.948 MHz, CPU Physical cores: 4, Host memory: 16639 MB
+# Running On: acidrain, OS: Linux, CPU Frequency: 3190.092 MHz, CPU Physical cores: 4, Host memory: 16639 MB
 #-----------------------------------------------------------
-source top.tcl -notrace
+source reciever_wrapper.tcl -notrace

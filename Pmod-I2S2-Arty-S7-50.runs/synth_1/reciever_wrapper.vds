@@ -1,0 +1,251 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sat May  4 20:14:07 2024
+# Process ID: 106571
+# Current directory: /home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/synth_1
+# Command line: vivado -log reciever_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source reciever_wrapper.tcl
+# Log file: /home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/synth_1/reciever_wrapper.vds
+# Journal file: /home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/synth_1/vivado.jou
+# Running On: acidrain, OS: Linux, CPU Frequency: 3190.092 MHz, CPU Physical cores: 4, Host memory: 16639 MB
+#-----------------------------------------------------------
+source reciever_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1320.535 ; gain = 0.027 ; free physical = 6065 ; free virtual = 11680
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/tools/Xilinx/Vivado/2023.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental /home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.srcs/utils_1/imports/synth_1/top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top reciever_wrapper -part xc7s50csga324-1 -flatten_hierarchy none -directive RuntimeOptimized -fsm_extraction off
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 106666
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2054.133 ; gain = 405.629 ; free physical = 5011 ; free virtual = 10637
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'reciever_wrapper' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/hdl/reciever_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'reciever' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/synth/reciever.v:13]
+INFO: [Synth 8-6157] synthesizing module 'reciever_axis_dwidth_converter_0_0' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/synth_1/.Xil/Vivado-106571-acidrain/realtime/reciever_axis_dwidth_converter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reciever_axis_dwidth_converter_0_0' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/synth_1/.Xil/Vivado-106571-acidrain/realtime/reciever_axis_dwidth_converter_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's_axis_tready' of module 'reciever_axis_dwidth_converter_0_0' is unconnected for instance 'axis_dwidth_converter_0' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/synth/reciever.v:64]
+WARNING: [Synth 8-7023] instance 'axis_dwidth_converter_0' of module 'reciever_axis_dwidth_converter_0_0' has 10 connections declared, but only 9 given [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/synth/reciever.v:64]
+INFO: [Synth 8-6157] synthesizing module 'reciever_axis_i2s2_0_0' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/synth_1/.Xil/Vivado-106571-acidrain/realtime/reciever_axis_i2s2_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reciever_axis_i2s2_0_0' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/synth_1/.Xil/Vivado-106571-acidrain/realtime/reciever_axis_i2s2_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'rx_axis_m_data' of module 'reciever_axis_i2s2_0_0' is unconnected for instance 'axis_i2s2_0' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/synth/reciever.v:74]
+WARNING: [Synth 8-7071] port 'rx_axis_m_valid' of module 'reciever_axis_i2s2_0_0' is unconnected for instance 'axis_i2s2_0' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/synth/reciever.v:74]
+WARNING: [Synth 8-7071] port 'rx_axis_m_last' of module 'reciever_axis_i2s2_0_0' is unconnected for instance 'axis_i2s2_0' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/synth/reciever.v:74]
+WARNING: [Synth 8-7023] instance 'axis_i2s2_0' of module 'reciever_axis_i2s2_0_0' has 18 connections declared, but only 15 given [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/synth/reciever.v:74]
+INFO: [Synth 8-6157] synthesizing module 'reciever_clk_wiz_0_0' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/synth_1/.Xil/Vivado-106571-acidrain/realtime/reciever_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reciever_clk_wiz_0_0' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/synth_1/.Xil/Vivado-106571-acidrain/realtime/reciever_clk_wiz_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'reciever_dds_compiler_0_0' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/synth_1/.Xil/Vivado-106571-acidrain/realtime/reciever_dds_compiler_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'reciever_dds_compiler_0_0' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/synth_1/.Xil/Vivado-106571-acidrain/realtime/reciever_dds_compiler_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'reciever_xlconstant_0_0' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_xlconstant_0_0/synth/reciever_xlconstant_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_8_xlconstant' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_8_xlconstant' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'reciever_xlconstant_0_0' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_xlconstant_0_0/synth/reciever_xlconstant_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'reciever_xlconstant_1_0' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_xlconstant_1_0/synth/reciever_xlconstant_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_8_xlconstant__parameterized0' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_8_xlconstant__parameterized0' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ipshared/d390/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'reciever_xlconstant_1_0' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_xlconstant_1_0/synth/reciever_xlconstant_1_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'reciever_xlconstant_1_1' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_xlconstant_1_1/synth/reciever_xlconstant_1_1.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'reciever_xlconstant_1_1' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_xlconstant_1_1/synth/reciever_xlconstant_1_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'reciever_xlconstant_1_2' [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_xlconstant_1_2/synth/reciever_xlconstant_1_2.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'reciever_xlconstant_1_2' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_xlconstant_1_2/synth/reciever_xlconstant_1_2.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'reciever' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/synth/reciever.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'reciever_wrapper' (0#1) [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/hdl/reciever_wrapper.v:13]
+WARNING: [Synth 8-3301] Unused top level parameter/generic RESET_POLARITY
+WARNING: [Synth 8-3301] Unused top level parameter/generic NUMBER_OF_SWITCHES
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2134.070 ; gain = 485.566 ; free physical = 4837 ; free virtual = 10465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2148.914 ; gain = 500.410 ; free physical = 4827 ; free virtual = 10464
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2148.914 ; gain = 500.410 ; free physical = 4827 ; free virtual = 10464
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2148.914 ; gain = 0.000 ; free physical = 4827 ; free virtual = 10464
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_axis_i2s2_0_0/reciever_axis_i2s2_0_0/reciever_axis_i2s2_0_0_in_context.xdc] for cell 'reciever_i/axis_i2s2_0'
+Finished Parsing XDC File [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_axis_i2s2_0_0/reciever_axis_i2s2_0_0/reciever_axis_i2s2_0_0_in_context.xdc] for cell 'reciever_i/axis_i2s2_0'
+Parsing XDC File [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_clk_wiz_0_0/reciever_clk_wiz_0_0/reciever_clk_wiz_0_0_in_context.xdc] for cell 'reciever_i/clk_wiz_0'
+Finished Parsing XDC File [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_clk_wiz_0_0/reciever_clk_wiz_0_0/reciever_clk_wiz_0_0_in_context.xdc] for cell 'reciever_i/clk_wiz_0'
+Parsing XDC File [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_dds_compiler_0_0/reciever_dds_compiler_0_0/reciever_dds_compiler_0_0_in_context.xdc] for cell 'reciever_i/dds_compiler_0'
+Finished Parsing XDC File [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_dds_compiler_0_0/reciever_dds_compiler_0_0/reciever_dds_compiler_0_0_in_context.xdc] for cell 'reciever_i/dds_compiler_0'
+Parsing XDC File [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_axis_dwidth_converter_0_0/reciever_axis_dwidth_converter_0_0/reciever_axis_dwidth_converter_0_0_in_context.xdc] for cell 'reciever_i/axis_dwidth_converter_0'
+Finished Parsing XDC File [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_axis_dwidth_converter_0_0/reciever_axis_dwidth_converter_0_0/reciever_axis_dwidth_converter_0_0_in_context.xdc] for cell 'reciever_i/axis_dwidth_converter_0'
+Parsing XDC File [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.srcs/constrs_1/imports/constraints/Arty-S7-50-Rev-E-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.srcs/constrs_1/imports/constraints/Arty-S7-50-Rev-E-Master.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.srcs/constrs_1/imports/constraints/Arty-S7-50-Rev-E-Master.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.srcs/constrs_1/imports/constraints/Arty-S7-50-Rev-E-Master.xdc:15]
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.srcs/constrs_1/imports/constraints/Arty-S7-50-Rev-E-Master.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'reset'. [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.srcs/constrs_1/imports/constraints/Arty-S7-50-Rev-E-Master.xdc:172]
+Finished Parsing XDC File [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.srcs/constrs_1/imports/constraints/Arty-S7-50-Rev-E-Master.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.srcs/constrs_1/imports/constraints/Arty-S7-50-Rev-E-Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/reciever_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.srcs/constrs_1/imports/constraints/Arty-S7-50-Rev-E-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/reciever_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/reciever_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2221.852 ; gain = 0.000 ; free physical = 4792 ; free virtual = 10460
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2221.887 ; gain = 0.000 ; free physical = 4792 ; free virtual = 10460
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2221.887 ; gain = 573.383 ; free physical = 4750 ; free virtual = 10521
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2221.887 ; gain = 573.383 ; free physical = 4745 ; free virtual = 10518
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  /home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_clk_wiz_0_0/reciever_clk_wiz_0_0/reciever_clk_wiz_0_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  /home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_clk_wiz_0_0/reciever_clk_wiz_0_0/reciever_clk_wiz_0_0_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for reciever_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for reciever_i/axis_i2s2_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for reciever_i/clk_wiz_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for reciever_i/dds_compiler_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for reciever_i/xlconstant_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for reciever_i/axis_dwidth_converter_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for reciever_i/xlconstant_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for reciever_i/xlconstant_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for reciever_i/xlconstant_3. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2221.887 ; gain = 573.383 ; free physical = 4706 ; free virtual = 10515
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2221.887 ; gain = 573.383 ; free physical = 4703 ; free virtual = 10517
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2221.887 ; gain = 573.383 ; free physical = 4745 ; free virtual = 10523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2221.887 ; gain = 573.383 ; free physical = 4718 ; free virtual = 10484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2221.887 ; gain = 573.383 ; free physical = 4718 ; free virtual = 10484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2221.887 ; gain = 573.383 ; free physical = 4704 ; free virtual = 10475
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2221.887 ; gain = 573.383 ; free physical = 4704 ; free virtual = 10475
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2221.887 ; gain = 573.383 ; free physical = 4704 ; free virtual = 10475
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+-----------------------------------+----------+
+|      |BlackBox name                      |Instances |
++------+-----------------------------------+----------+
+|1     |reciever_axis_dwidth_converter_0_0 |         1|
+|2     |reciever_axis_i2s2_0_0             |         1|
+|3     |reciever_clk_wiz_0_0               |         1|
+|4     |reciever_dds_compiler_0_0          |         1|
++------+-----------------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------------+------+
+|      |Cell                             |Count |
++------+---------------------------------+------+
+|1     |reciever_axis_dwidth_converter_0 |     1|
+|2     |reciever_axis_i2s2_0             |     1|
+|3     |reciever_clk_wiz_0               |     1|
+|4     |reciever_dds_compiler_0          |     1|
+|5     |IBUF                             |     1|
+|6     |OBUF                             |     7|
++------+---------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2221.887 ; gain = 573.383 ; free physical = 4704 ; free virtual = 10475
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2221.887 ; gain = 500.410 ; free physical = 4704 ; free virtual = 10475
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2221.887 ; gain = 573.383 ; free physical = 4704 ; free virtual = 10475
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2221.887 ; gain = 0.000 ; free physical = 4704 ; free virtual = 10475
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2221.887 ; gain = 0.000 ; free physical = 4983 ; free virtual = 10753
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 4a7edf9a
+INFO: [Common 17-83] Releasing license: Synthesis
+46 Infos, 15 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:28 . Memory (MB): peak = 2221.887 ; gain = 898.383 ; free physical = 4981 ; free virtual = 10752
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1827.794; main = 1505.229; forked = 372.326
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3180.309; main = 2189.840; forked = 990.469
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2221.887 ; gain = 0.000 ; free physical = 4981 ; free virtual = 10752
+INFO: [Common 17-1381] The checkpoint '/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.runs/synth_1/reciever_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file reciever_wrapper_utilization_synth.rpt -pb reciever_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat May  4 20:14:49 2024...

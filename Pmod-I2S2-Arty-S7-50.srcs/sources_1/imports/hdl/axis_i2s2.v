@@ -79,15 +79,15 @@ module axis_i2s2 (
             tx_axis_s_ready <= 1'b1;
 
     always@(posedge axis_clk)
-        if (axis_resetn == 1'b0)begin
+        if (axis_resetn == 1'b0)
+        begin
             tx_data_r <= 32'b0;
             tx_data_l <= 32'b0;
-        end
-        else if (tx_axis_s_valid == 1'b1 && tx_axis_s_ready == 1'b1)
+        end else if (tx_axis_s_valid == 1'b1 && tx_axis_s_ready == 1'b1)
             if (tx_axis_s_last == 1'b1)
                 tx_data_r <= tx_axis_s_data;
-        else
-            tx_data_l <= tx_axis_s_data;
+            else
+                tx_data_l <= tx_axis_s_data;
 
     /* I2S TRANSMIT SHIFT REGISTERS */
     reg [23:0] tx_data_l_shift = 24'b0;
