@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date             : Sat May  4 21:03:05 2024
+| Date             : Sat May  4 21:52:27 2024
 | Host             : acidrain running 64-bit Ubuntu 24.04 LTS
 | Command          : report_power -file reciever_wrapper_power_routed.rpt -pb reciever_wrapper_power_summary_routed.pb -rpx reciever_wrapper_power_routed.rpx
 | Design           : reciever_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.183        |
+| Total On-Chip Power (W)  | 0.186        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.111        |
+| Dynamic (W)              | 0.114        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 4.9          |
 | Max Ambient (C)          | 84.1         |
@@ -53,18 +53,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        8 |       --- |             --- |
-| Slice Logic    |    <0.001 |      523 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      133 |     32600 |            0.41 |
-|   Register     |    <0.001 |      297 |     65200 |            0.46 |
+| Slice Logic    |    <0.001 |      820 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      162 |     32600 |            0.50 |
+|   Register     |    <0.001 |      528 |     65200 |            0.81 |
 |   CARRY4       |    <0.001 |       18 |      8150 |            0.22 |
-|   Others       |     0.000 |       32 |       --- |             --- |
-| Signals        |    <0.001 |      581 |       --- |             --- |
+|   Others       |     0.000 |       52 |       --- |             --- |
+| Signals        |     0.002 |     1176 |       --- |             --- |
 | Block RAM      |     0.001 |      1.5 |        75 |            2.00 |
 | MMCM           |     0.099 |        1 |         5 |           20.00 |
-| DSPs           |     0.001 |        5 |       120 |            4.17 |
-| I/O            |     0.008 |       10 |       210 |            4.76 |
+| DSPs           |     0.003 |       11 |       120 |            9.17 |
+| I/O            |     0.008 |       11 |       210 |            5.24 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.183 |          |           |                 |
+| Total          |     0.186 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.014 |       0.004 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.017 |       0.007 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.068 |       0.056 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -146,10 +146,12 @@ Table of Contents
 +--------------------+-----------+
 | Name               | Power (W) |
 +--------------------+-----------+
-| reciever_wrapper   |     0.111 |
-|   reciever_i       |     0.104 |
+| reciever_wrapper   |     0.114 |
+|   reciever_i       |     0.107 |
 |     clk_wiz_0      |     0.100 |
 |       inst         |     0.100 |
+|     cmpy_0         |     0.002 |
+|       U0           |     0.002 |
 |     dds_compiler_0 |     0.004 |
 |       U0           |     0.004 |
 +--------------------+-----------+

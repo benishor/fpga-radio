@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat May  4 21:00:25 2024" VIVADOVERSION="2023.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat May  4 21:49:36 2024" VIVADOVERSION="2023.2">
 
   <SYSTEMINFO ARCH="spartan7" BOARD="digilentinc.com:arty-s7-50:part0:1.0" DEVICE="7s50" NAME="reciever" PACKAGE="csga324" SPEEDGRADE="-1"/>
 
@@ -117,9 +117,9 @@
             <CONNECTION INSTANCE="axis_i2s2_0" PORT="tx_axis_s_valid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="47" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="dds_compiler_0_m_axis_data_tdata">
+        <PORT DIR="I" LEFT="47" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="cmpy_0_m_axis_dout_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="dds_compiler_0" PORT="m_axis_data_tdata"/>
+            <CONNECTION INSTANCE="cmpy_0" PORT="m_axis_dout_tdata"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axis_tlast" SIGIS="undef" SIGNAME="xlconstant_2_dout">
@@ -128,9 +128,9 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="s_axis_tready" SIGIS="undef"/>
-        <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="dds_compiler_0_m_axis_data_tvalid">
+        <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="cmpy_0_m_axis_dout_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="dds_compiler_0" PORT="m_axis_data_tvalid"/>
+            <CONNECTION INSTANCE="cmpy_0" PORT="m_axis_dout_tvalid"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -179,6 +179,124 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
+    <MODULE COREREVISION="28" FULLNAME="/axis_dwidth_converter_1" HWVERSION="1.1" INSTANCE="axis_dwidth_converter_1" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axis_dwidth_converter" VLNV="xilinx.com:ip:axis_dwidth_converter:1.1">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="https://www.xilinx.com/cgi-bin/docs/ipdoc?c=axis_dwidth_converter;v=v1_1;d=pg085-axi4stream-infrastructure.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000000010011"/>
+        <PARAMETER NAME="C_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_AXIS_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_FAMILY" VALUE="spartan7"/>
+        <PARAMETER NAME="C_M_AXIS_TDATA_WIDTH" VALUE="48"/>
+        <PARAMETER NAME="C_M_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_TDATA_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_S_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="reciever_axis_dwidth_converter_1_0"/>
+        <PARAMETER NAME="HAS_ACLKEN" VALUE="0"/>
+        <PARAMETER NAME="HAS_MI_TKEEP" VALUE="1"/>
+        <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+        <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+        <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+        <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+        <PARAMETER NAME="M_TDATA_NUM_BYTES" VALUE="6"/>
+        <PARAMETER NAME="S_TDATA_NUM_BYTES" VALUE="3"/>
+        <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="TUSER_BITS_PER_BYTE" VALUE="0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="24573991" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aresetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="xlconstant_3_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_3" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="47" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_dwidth_converter_1_m_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cmpy_0" PORT="s_axis_a_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="m_axis_tkeep" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="m_axis_tlast" SIGIS="undef"/>
+        <PORT DIR="I" NAME="m_axis_tready" SIGIS="undef"/>
+        <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="axis_dwidth_converter_1_m_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="cmpy_0" PORT="s_axis_a_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_i2s2_0_rx_axis_m_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_i2s2_0" PORT="rx_axis_m_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tlast" SIGIS="undef" SIGNAME="axis_i2s2_0_rx_axis_m_last">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_i2s2_0" PORT="rx_axis_m_last"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axis_tready" SIGIS="undef" SIGNAME="axis_dwidth_converter_1_s_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_i2s2_0" PORT="rx_axis_m_ready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="axis_i2s2_0_rx_axis_m_valid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_i2s2_0" PORT="rx_axis_m_valid"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="S_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="/clk_wiz_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="24573991"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_tready"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="M_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="/clk_wiz_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="24573991"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="6"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_tdata"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="m_axis_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_tready"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
     <MODULE COREREVISION="1" FULLNAME="/axis_i2s2_0" HWVERSION="1.0" INSTANCE="axis_i2s2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axis_i2s2" VLNV="xilinx.com:module_ref:axis_i2s2:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
@@ -196,10 +314,26 @@
             <CONNECTION INSTANCE="xlconstant_3" PORT="dout"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="rx_axis_m_data" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="rx_axis_m_last" SIGIS="undef"/>
-        <PORT DIR="I" NAME="rx_axis_m_ready" SIGIS="undef"/>
-        <PORT DIR="O" NAME="rx_axis_m_valid" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="31" NAME="rx_axis_m_data" RIGHT="0" SIGIS="undef" SIGNAME="axis_i2s2_0_rx_axis_m_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_dwidth_converter_1" PORT="s_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="rx_axis_m_last" SIGIS="undef" SIGNAME="axis_i2s2_0_rx_axis_m_last">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_dwidth_converter_1" PORT="s_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="rx_axis_m_ready" SIGIS="undef" SIGNAME="axis_dwidth_converter_1_s_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_dwidth_converter_1" PORT="s_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="rx_axis_m_valid" SIGIS="undef" SIGNAME="axis_i2s2_0_rx_axis_m_valid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_dwidth_converter_1" PORT="s_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" NAME="rx_lrck" SIGIS="undef" SIGNAME="axis_i2s2_0_rx_lrck">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="rx_lrck"/>
@@ -854,10 +988,169 @@
             <CONNECTION INSTANCE="dds_compiler_0" PORT="aclk"/>
             <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="aclk"/>
             <CONNECTION INSTANCE="phase_provider_0" PORT="axis_clk"/>
+            <CONNECTION INSTANCE="axis_dwidth_converter_1" PORT="aclk"/>
+            <CONNECTION INSTANCE="cmpy_0" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="22" FULLNAME="/cmpy_0" HWVERSION="6.0" INSTANCE="cmpy_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="cmpy" VLNV="xilinx.com:ip:cmpy:6.0">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=cmpy;v=v6_0;d=pg104-cmpy.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_A_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_B_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_HAS_ACLKEN" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_ARESETN" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_A_TLAST" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_A_TUSER" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_B_TLAST" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_B_TUSER" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_CTRL_TLAST" VALUE="0"/>
+        <PARAMETER NAME="C_HAS_S_AXIS_CTRL_TUSER" VALUE="0"/>
+        <PARAMETER NAME="C_LATENCY" VALUE="2"/>
+        <PARAMETER NAME="C_MULT_TYPE" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXIS_DOUT_TDATA_WIDTH" VALUE="48"/>
+        <PARAMETER NAME="C_M_AXIS_DOUT_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_OPTIMIZE_GOAL" VALUE="0"/>
+        <PARAMETER NAME="C_OUT_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_S_AXIS_A_TDATA_WIDTH" VALUE="48"/>
+        <PARAMETER NAME="C_S_AXIS_A_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_B_TDATA_WIDTH" VALUE="48"/>
+        <PARAMETER NAME="C_S_AXIS_B_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_CTRL_TDATA_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="C_S_AXIS_CTRL_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_THROTTLE_SCHEME" VALUE="3"/>
+        <PARAMETER NAME="C_TLAST_RESOLUTION" VALUE="0"/>
+        <PARAMETER NAME="C_VERBOSITY" VALUE="0"/>
+        <PARAMETER NAME="C_XDEVICE" VALUE="xc7s50"/>
+        <PARAMETER NAME="C_XDEVICEFAMILY" VALUE="spartan7"/>
+        <PARAMETER NAME="HAS_NEGATE" VALUE="0"/>
+        <PARAMETER NAME="ROUND" VALUE="0"/>
+        <PARAMETER NAME="SINGLE_OUTPUT" VALUE="0"/>
+        <PARAMETER NAME="USE_DSP_CASCADES" VALUE="1"/>
+        <PARAMETER NAME="ACLKEN" VALUE="false"/>
+        <PARAMETER NAME="APortWidth" VALUE="24"/>
+        <PARAMETER NAME="ARESETN" VALUE="false"/>
+        <PARAMETER NAME="ATUSERWidth" VALUE="1"/>
+        <PARAMETER NAME="BPortWidth" VALUE="24"/>
+        <PARAMETER NAME="BTUSERWidth" VALUE="1"/>
+        <PARAMETER NAME="CTRLTUSERWidth" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="reciever_cmpy_0_0"/>
+        <PARAMETER NAME="FlowControl" VALUE="NonBlocking"/>
+        <PARAMETER NAME="HasATLAST" VALUE="false"/>
+        <PARAMETER NAME="HasATUSER" VALUE="false"/>
+        <PARAMETER NAME="HasBTLAST" VALUE="false"/>
+        <PARAMETER NAME="HasBTUSER" VALUE="false"/>
+        <PARAMETER NAME="HasCTRLTLAST" VALUE="false"/>
+        <PARAMETER NAME="HasCTRLTUSER" VALUE="false"/>
+        <PARAMETER NAME="LatencyConfig" VALUE="Manual"/>
+        <PARAMETER NAME="MinimumLatency" VALUE="2"/>
+        <PARAMETER NAME="MultType" VALUE="Use_Mults"/>
+        <PARAMETER NAME="OptimizeGoal" VALUE="Resources"/>
+        <PARAMETER NAME="OutTLASTBehv" VALUE="Null"/>
+        <PARAMETER NAME="OutputWidth" VALUE="24"/>
+        <PARAMETER NAME="RoundMode" VALUE="Truncate"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="24573991" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_out1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="47" NAME="m_axis_dout_tdata" RIGHT="0" SIGIS="undef" SIGNAME="cmpy_0_m_axis_dout_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="s_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_dout_tvalid" SIGIS="undef" SIGNAME="cmpy_0_m_axis_dout_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="s_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="47" NAME="s_axis_a_tdata" RIGHT="0" SIGIS="undef" SIGNAME="axis_dwidth_converter_1_m_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_dwidth_converter_1" PORT="m_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_a_tvalid" SIGIS="undef" SIGNAME="axis_dwidth_converter_1_m_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_dwidth_converter_1" PORT="m_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="47" NAME="s_axis_b_tdata" RIGHT="0" SIGIS="undef" SIGNAME="dds_compiler_0_m_axis_data_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dds_compiler_0" PORT="m_axis_data_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_b_tvalid" SIGIS="undef" SIGNAME="dds_compiler_0_m_axis_data_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="dds_compiler_0" PORT="m_axis_data_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="M_AXIS_DOUT" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="/clk_wiz_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="24573991"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 48} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} complex {bitwidth {attribs {resolve_type generated dependency set_width format long minimum {} maximum {}} value 24} stride {attribs {resolve_type generated dependency set_stride format long minimum {} maximum {}} value 24} real {fixed {fractwidth {attribs {resolve_type generated dependency set_fractwidth format long minimum {} maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}} realfirst {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}} TDATA_WIDTH 48 TUSER {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type automatic dependency {} format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} struct {field_a_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value a_tuser} enabled {attribs {resolve_type generated dependency a_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency a_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} field_b_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value b_tuser} enabled {attribs {resolve_type generated dependency b_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency b_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency b_offset format long minimum {} maximum {}} value 0}}} field_ctrl_tuser {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value ctrl_tuser} enabled {attribs {resolve_type generated dependency ctrl_enabled format bool minimum {} maximum {}} value false} datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type generated dependency ctrl_width format long minimum {} maximum {}} value 0} bitoffset {attribs {resolve_type generated dependency ctrl_offset format long minimum {} maximum {}} value 0}}}}}} TUSER_WIDTH 0}"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="6"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_dout_tdata"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_dout_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="S_AXIS_A" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="/clk_wiz_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="24573991"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="6"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_a_tdata"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_a_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="__NOC__" NAME="S_AXIS_B" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="/clk_wiz_0_clk_out1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="24573991"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="0"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="0"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="6"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_b_tdata"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_b_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
     </MODULE>
     <MODULE COREREVISION="23" FULLNAME="/dds_compiler_0" HWVERSION="6.0" INSTANCE="dds_compiler_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="dds_compiler" VLNV="xilinx.com:ip:dds_compiler:6.0">
       <DOCUMENTS>
@@ -1024,12 +1317,12 @@
         </PORT>
         <PORT DIR="O" LEFT="47" NAME="m_axis_data_tdata" RIGHT="0" SIGIS="undef" SIGNAME="dds_compiler_0_m_axis_data_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="s_axis_tdata"/>
+            <CONNECTION INSTANCE="cmpy_0" PORT="s_axis_b_tdata"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="m_axis_data_tvalid" SIGIS="undef" SIGNAME="dds_compiler_0_m_axis_data_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="s_axis_tvalid"/>
+            <CONNECTION INSTANCE="cmpy_0" PORT="s_axis_b_tvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="s_axis_phase_tdata" RIGHT="0" SIGIS="undef" SIGNAME="phase_provider_0_phase">
@@ -1144,6 +1437,7 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="axis_dwidth_converter_0" PORT="aresetn"/>
             <CONNECTION INSTANCE="axis_i2s2_0" PORT="axis_resetn"/>
+            <CONNECTION INSTANCE="axis_dwidth_converter_1" PORT="aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

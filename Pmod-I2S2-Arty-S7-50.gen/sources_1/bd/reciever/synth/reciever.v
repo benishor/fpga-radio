@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Sat May  4 21:00:24 2024
+//Date        : Sat May  4 21:49:35 2024
 //Host        : acidrain running 64-bit Ubuntu 24.04 LTS
 //Command     : generate_target reciever.bd
 //Design      : reciever
@@ -10,7 +10,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "reciever,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=reciever,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=7,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_clkrst_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "reciever.hwdef" *) 
+(* CORE_GENERATION_INFO = "reciever,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=reciever,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=9,numReposBlks=9,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,da_clkrst_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "reciever.hwdef" *) 
 module reciever
    (btn,
     clk,
@@ -37,6 +37,12 @@ module reciever
   wire [23:0]axis_dwidth_converter_0_m_axis_tdata;
   wire axis_dwidth_converter_0_m_axis_tlast;
   wire axis_dwidth_converter_0_m_axis_tvalid;
+  wire [47:0]axis_dwidth_converter_1_m_axis_tdata;
+  wire axis_dwidth_converter_1_m_axis_tvalid;
+  wire axis_dwidth_converter_1_s_axis_tready;
+  wire [31:0]axis_i2s2_0_rx_axis_m_data;
+  wire axis_i2s2_0_rx_axis_m_last;
+  wire axis_i2s2_0_rx_axis_m_valid;
   wire axis_i2s2_0_rx_lrck;
   wire axis_i2s2_0_rx_mclk;
   wire axis_i2s2_0_rx_sclk;
@@ -48,6 +54,8 @@ module reciever
   wire [1:0]btn_0_1;
   wire clk_in1_0_1;
   wire clk_wiz_0_clk_out1;
+  wire [47:0]cmpy_0_m_axis_dout_tdata;
+  wire cmpy_0_m_axis_dout_tvalid;
   wire [47:0]dds_compiler_0_m_axis_data_tdata;
   wire dds_compiler_0_m_axis_data_tvalid;
   wire [25:0]phase_provider_0_phase;
@@ -72,13 +80,26 @@ module reciever
         .m_axis_tlast(axis_dwidth_converter_0_m_axis_tlast),
         .m_axis_tready(axis_i2s2_0_tx_axis_s_ready),
         .m_axis_tvalid(axis_dwidth_converter_0_m_axis_tvalid),
-        .s_axis_tdata(dds_compiler_0_m_axis_data_tdata),
+        .s_axis_tdata(cmpy_0_m_axis_dout_tdata),
         .s_axis_tlast(xlconstant_2_dout),
-        .s_axis_tvalid(dds_compiler_0_m_axis_data_tvalid));
+        .s_axis_tvalid(cmpy_0_m_axis_dout_tvalid));
+  reciever_axis_dwidth_converter_1_0 axis_dwidth_converter_1
+       (.aclk(clk_wiz_0_clk_out1),
+        .aresetn(Net),
+        .m_axis_tdata(axis_dwidth_converter_1_m_axis_tdata),
+        .m_axis_tready(1'b1),
+        .m_axis_tvalid(axis_dwidth_converter_1_m_axis_tvalid),
+        .s_axis_tdata(axis_i2s2_0_rx_axis_m_data[23:0]),
+        .s_axis_tlast(axis_i2s2_0_rx_axis_m_last),
+        .s_axis_tready(axis_dwidth_converter_1_s_axis_tready),
+        .s_axis_tvalid(axis_i2s2_0_rx_axis_m_valid));
   reciever_axis_i2s2_0_0 axis_i2s2_0
        (.axis_clk(clk_wiz_0_clk_out1),
         .axis_resetn(Net),
-        .rx_axis_m_ready(1'b0),
+        .rx_axis_m_data(axis_i2s2_0_rx_axis_m_data),
+        .rx_axis_m_last(axis_i2s2_0_rx_axis_m_last),
+        .rx_axis_m_ready(axis_dwidth_converter_1_s_axis_tready),
+        .rx_axis_m_valid(axis_i2s2_0_rx_axis_m_valid),
         .rx_lrck(axis_i2s2_0_rx_lrck),
         .rx_mclk(axis_i2s2_0_rx_mclk),
         .rx_sclk(axis_i2s2_0_rx_sclk),
@@ -94,6 +115,14 @@ module reciever
   reciever_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(clk_in1_0_1),
         .clk_out1(clk_wiz_0_clk_out1));
+  reciever_cmpy_0_0 cmpy_0
+       (.aclk(clk_wiz_0_clk_out1),
+        .m_axis_dout_tdata(cmpy_0_m_axis_dout_tdata),
+        .m_axis_dout_tvalid(cmpy_0_m_axis_dout_tvalid),
+        .s_axis_a_tdata(axis_dwidth_converter_1_m_axis_tdata),
+        .s_axis_a_tvalid(axis_dwidth_converter_1_m_axis_tvalid),
+        .s_axis_b_tdata(dds_compiler_0_m_axis_data_tdata),
+        .s_axis_b_tvalid(dds_compiler_0_m_axis_data_tvalid));
   reciever_dds_compiler_0_0 dds_compiler_0
        (.aclk(clk_wiz_0_clk_out1),
         .m_axis_data_tdata(dds_compiler_0_m_axis_data_tdata),

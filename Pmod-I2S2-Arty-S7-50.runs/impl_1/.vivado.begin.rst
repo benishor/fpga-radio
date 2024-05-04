@@ -103,3 +103,8 @@
     <Process Command="vivado" Owner="benny" Host="acidrain" Pid="153706" HostCore="8" HostMemory="16249624">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="benny" Host="acidrain" Pid="166727" HostCore="8" HostMemory="16249624">
+    </Process>
+</ProcessHandle>

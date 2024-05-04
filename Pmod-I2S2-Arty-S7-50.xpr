@@ -117,11 +117,17 @@
         <CompFileExtendedInfo CompFileName="reciever.bd" FileRelPathName="ip/reciever_axis_dwidth_converter_0_0/reciever_axis_dwidth_converter_0_0.xci">
           <Proxy FileSetName="reciever_axis_dwidth_converter_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="reciever.bd" FileRelPathName="ip/reciever_axis_dwidth_converter_1_0/reciever_axis_dwidth_converter_1_0.xci">
+          <Proxy FileSetName="reciever_axis_dwidth_converter_1_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="reciever.bd" FileRelPathName="ip/reciever_axis_i2s2_0_0/reciever_axis_i2s2_0_0.xci">
           <Proxy FileSetName="reciever_axis_i2s2_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="reciever.bd" FileRelPathName="ip/reciever_clk_wiz_0_0/reciever_clk_wiz_0_0.xci">
           <Proxy FileSetName="reciever_clk_wiz_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="reciever.bd" FileRelPathName="ip/reciever_cmpy_0_0/reciever_cmpy_0_0.xci">
+          <Proxy FileSetName="reciever_cmpy_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="reciever.bd" FileRelPathName="ip/reciever_dds_compiler_0_0/reciever_dds_compiler_0_0.xci">
           <Proxy FileSetName="reciever_dds_compiler_0_0"/>
@@ -296,6 +302,22 @@
         <Generic Name="NUMBER_OF_SWITCHES" Val="4"/>
       </Config>
     </FileSet>
+    <FileSet Name="reciever_axis_dwidth_converter_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/reciever_axis_dwidth_converter_1_0" RelGenDir="$PGENDIR/reciever_axis_dwidth_converter_1_0">
+      <Config>
+        <Option Name="TopModule" Val="reciever_axis_dwidth_converter_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+        <Generic Name="RESET_POLARITY" Val="0"/>
+        <Generic Name="NUMBER_OF_SWITCHES" Val="4"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="reciever_cmpy_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/reciever_cmpy_0_0" RelGenDir="$PGENDIR/reciever_cmpy_0_0">
+      <Config>
+        <Option Name="TopModule" Val="reciever_cmpy_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+        <Generic Name="RESET_POLARITY" Val="0"/>
+        <Generic Name="NUMBER_OF_SWITCHES" Val="4"/>
+      </Config>
+    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -402,6 +424,30 @@
       <RQSFiles/>
     </Run>
     <Run Id="reciever_phase_provider_0_0_synth_1" Type="Ft3:Synth" SrcSet="reciever_phase_provider_0_0" Part="xc7s50csga324-1" ConstrsSet="reciever_phase_provider_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/reciever_phase_provider_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/reciever_phase_provider_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/reciever_phase_provider_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="reciever_axis_dwidth_converter_1_0_synth_1" Type="Ft3:Synth" SrcSet="reciever_axis_dwidth_converter_1_0" Part="xc7s50csga324-1" ConstrsSet="reciever_axis_dwidth_converter_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/reciever_axis_dwidth_converter_1_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/reciever_axis_dwidth_converter_1_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/reciever_axis_dwidth_converter_1_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="reciever_cmpy_0_0_synth_1" Type="Ft3:Synth" SrcSet="reciever_cmpy_0_0" Part="xc7s50csga324-1" ConstrsSet="reciever_cmpy_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/reciever_cmpy_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/reciever_cmpy_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/reciever_cmpy_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -548,6 +594,44 @@
       <RQSFiles/>
     </Run>
     <Run Id="reciever_phase_provider_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7s50csga324-1" ConstrsSet="reciever_phase_provider_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="reciever_phase_provider_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/reciever_phase_provider_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/reciever_phase_provider_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="reciever_axis_dwidth_converter_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7s50csga324-1" ConstrsSet="reciever_axis_dwidth_converter_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="reciever_axis_dwidth_converter_1_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/reciever_axis_dwidth_converter_1_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/reciever_axis_dwidth_converter_1_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2023"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="reciever_cmpy_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7s50csga324-1" ConstrsSet="reciever_cmpy_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="reciever_cmpy_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/reciever_cmpy_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/reciever_cmpy_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
           <Desc>Default settings for Implementation.</Desc>

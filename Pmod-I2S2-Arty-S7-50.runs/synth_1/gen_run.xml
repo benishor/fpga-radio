@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1714845629" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1714848578" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/top.dcp">
   <File Type="VDS-TIMINGSUMMARY" Name="reciever_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="reciever_wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="reciever_wrapper_utilization_synth.pb"/>
@@ -111,9 +111,11 @@
       <Option Id="FsmExtraction">0</Option>
     </Step>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="reciever_cmpy_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="reciever_phase_provider_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="reciever_dds_compiler_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="reciever_axis_i2s2_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="reciever_axis_dwidth_converter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="reciever_axis_dwidth_converter_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="reciever_clk_wiz_0_0"/>
 </GenRun>

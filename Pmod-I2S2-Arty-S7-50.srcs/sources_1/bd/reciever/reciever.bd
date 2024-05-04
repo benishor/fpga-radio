@@ -17,7 +17,9 @@
       "axis_dwidth_converter_0": "",
       "xlconstant_2": "",
       "xlconstant_3": "",
-      "phase_provider_0": ""
+      "phase_provider_0": "",
+      "axis_dwidth_converter_1": "",
+      "cmpy_0": ""
     },
     "ports": {
       "clk": {
@@ -351,6 +353,48 @@
             "direction": "O"
           }
         }
+      },
+      "axis_dwidth_converter_1": {
+        "vlnv": "xilinx.com:ip:axis_dwidth_converter:1.1",
+        "ip_revision": "28",
+        "xci_name": "reciever_axis_dwidth_converter_1_0",
+        "xci_path": "ip/reciever_axis_dwidth_converter_1_0/reciever_axis_dwidth_converter_1_0.xci",
+        "inst_hier_path": "axis_dwidth_converter_1",
+        "parameters": {
+          "HAS_TLAST": {
+            "value": "1"
+          },
+          "M_TDATA_NUM_BYTES": {
+            "value": "6"
+          },
+          "S_TDATA_NUM_BYTES": {
+            "value": "3"
+          }
+        }
+      },
+      "cmpy_0": {
+        "vlnv": "xilinx.com:ip:cmpy:6.0",
+        "ip_revision": "22",
+        "xci_name": "reciever_cmpy_0_0",
+        "xci_path": "ip/reciever_cmpy_0_0/reciever_cmpy_0_0.xci",
+        "inst_hier_path": "cmpy_0",
+        "parameters": {
+          "APortWidth": {
+            "value": "24"
+          },
+          "BPortWidth": {
+            "value": "24"
+          },
+          "LatencyConfig": {
+            "value": "Manual"
+          },
+          "MinimumLatency": {
+            "value": "2"
+          },
+          "OutputWidth": {
+            "value": "24"
+          }
+        }
       }
     },
     "nets": {
@@ -358,7 +402,8 @@
         "ports": [
           "xlconstant_3/dout",
           "axis_dwidth_converter_0/aresetn",
-          "axis_i2s2_0/axis_resetn"
+          "axis_i2s2_0/axis_resetn",
+          "axis_dwidth_converter_1/aresetn"
         ]
       },
       "axis_dwidth_converter_0_m_axis_tdata": {
@@ -377,6 +422,42 @@
         "ports": [
           "axis_dwidth_converter_0/m_axis_tvalid",
           "axis_i2s2_0/tx_axis_s_valid"
+        ]
+      },
+      "axis_dwidth_converter_1_m_axis_tdata": {
+        "ports": [
+          "axis_dwidth_converter_1/m_axis_tdata",
+          "cmpy_0/s_axis_a_tdata"
+        ]
+      },
+      "axis_dwidth_converter_1_m_axis_tvalid": {
+        "ports": [
+          "axis_dwidth_converter_1/m_axis_tvalid",
+          "cmpy_0/s_axis_a_tvalid"
+        ]
+      },
+      "axis_dwidth_converter_1_s_axis_tready": {
+        "ports": [
+          "axis_dwidth_converter_1/s_axis_tready",
+          "axis_i2s2_0/rx_axis_m_ready"
+        ]
+      },
+      "axis_i2s2_0_rx_axis_m_data": {
+        "ports": [
+          "axis_i2s2_0/rx_axis_m_data",
+          "axis_dwidth_converter_1/s_axis_tdata"
+        ]
+      },
+      "axis_i2s2_0_rx_axis_m_last": {
+        "ports": [
+          "axis_i2s2_0/rx_axis_m_last",
+          "axis_dwidth_converter_1/s_axis_tlast"
+        ]
+      },
+      "axis_i2s2_0_rx_axis_m_valid": {
+        "ports": [
+          "axis_i2s2_0/rx_axis_m_valid",
+          "axis_dwidth_converter_1/s_axis_tvalid"
         ]
       },
       "axis_i2s2_0_rx_lrck": {
@@ -445,19 +526,33 @@
           "axis_i2s2_0/axis_clk",
           "dds_compiler_0/aclk",
           "axis_dwidth_converter_0/aclk",
-          "phase_provider_0/axis_clk"
+          "phase_provider_0/axis_clk",
+          "axis_dwidth_converter_1/aclk",
+          "cmpy_0/aclk"
+        ]
+      },
+      "cmpy_0_m_axis_dout_tdata": {
+        "ports": [
+          "cmpy_0/m_axis_dout_tdata",
+          "axis_dwidth_converter_0/s_axis_tdata"
+        ]
+      },
+      "cmpy_0_m_axis_dout_tvalid": {
+        "ports": [
+          "cmpy_0/m_axis_dout_tvalid",
+          "axis_dwidth_converter_0/s_axis_tvalid"
         ]
       },
       "dds_compiler_0_m_axis_data_tdata": {
         "ports": [
           "dds_compiler_0/m_axis_data_tdata",
-          "axis_dwidth_converter_0/s_axis_tdata"
+          "cmpy_0/s_axis_b_tdata"
         ]
       },
       "dds_compiler_0_m_axis_data_tvalid": {
         "ports": [
           "dds_compiler_0/m_axis_data_tvalid",
-          "axis_dwidth_converter_0/s_axis_tvalid"
+          "cmpy_0/s_axis_b_tvalid"
         ]
       },
       "phase_provider_0_phase": {

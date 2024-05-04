@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date         : Sat May  4 21:02:43 2024
+| Date         : Sat May  4 21:52:02 2024
 | Host         : acidrain running 64-bit Ubuntu 24.04 LTS
 | Command      : report_drc -file reciever_wrapper_drc_opted.rpt -pb reciever_wrapper_drc_opted.pb -rpx reciever_wrapper_drc_opted.rpx
 | Design       : reciever_wrapper
@@ -24,11 +24,11 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 16
+             Violations found: 27
 +--------+----------+-------------------------------------------------------------------+------------+
 | Rule   | Severity | Description                                                       | Violations |
 +--------+----------+-------------------------------------------------------------------+------------+
-| DPIP-1 | Warning  | Input pipelining                                                  | 11         |
+| DPIP-1 | Warning  | Input pipelining                                                  | 22         |
 | AVAL-4 | Advisory | enum_USE_DPORT_FALSE_enum_DREG_ADREG_0_connects_CED_CEAD_RSTD_GND | 5          |
 +--------+----------+-------------------------------------------------------------------+------------+
 
@@ -36,55 +36,110 @@ Table of Contents
 -----------------
 DPIP-1#1 Warning
 Input pipelining  
-DSP reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/MULT_PI_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive input reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/MULT_PI_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult1_preadder_d_plus_a.mult1/mult/use_prim.appDSP[0].bppDSP[0].use_dsp.use_dsp48e1.iDSP48E1 input reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult1_preadder_d_plus_a.mult1/mult/use_prim.appDSP[0].bppDSP[0].use_dsp.use_dsp48e1.iDSP48E1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#2 Warning
 Input pipelining  
-DSP reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/S1_COS_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive input reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/S1_COS_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult1_preadder_d_plus_a.mult1/mult/use_prim.appDSP[0].bppDSP[0].use_dsp.use_dsp48e1.iDSP48E1 input reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult1_preadder_d_plus_a.mult1/mult/use_prim.appDSP[0].bppDSP[0].use_dsp.use_dsp48e1.iDSP48E1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#3 Warning
 Input pipelining  
-DSP reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/S1_COS_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive input reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/S1_COS_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult1_preadder_d_plus_a.mult1/mult/use_prim.appDSP[0].bppDSP[0].use_dsp.use_dsp48e1.iDSP48E1 input reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult1_preadder_d_plus_a.mult1/mult/use_prim.appDSP[0].bppDSP[0].use_dsp.use_dsp48e1.iDSP48E1/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#4 Warning
 Input pipelining  
-DSP reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/S1_SIN_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive input reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/S1_SIN_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult1_preadder_d_plus_a.mult1/mult/use_prim.appDSP[0].bppDSP[1].use_dsp.use_dsp48e1.iDSP48E1 input reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult1_preadder_d_plus_a.mult1/mult/use_prim.appDSP[0].bppDSP[1].use_dsp.use_dsp48e1.iDSP48E1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#5 Warning
 Input pipelining  
-DSP reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/S1_SIN_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive input reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/S1_SIN_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult2_preadder_d_plus_a.mult2/mult/use_prim.appDSP[0].bppDSP[0].use_dsp.use_dsp48e1.iDSP48E1 input reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult2_preadder_d_plus_a.mult2/mult/use_prim.appDSP[0].bppDSP[0].use_dsp.use_dsp48e1.iDSP48E1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#6 Warning
 Input pipelining  
-DSP reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_COS_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive input reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_COS_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult2_preadder_d_plus_a.mult2/mult/use_prim.appDSP[0].bppDSP[0].use_dsp.use_dsp48e1.iDSP48E1 input reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult2_preadder_d_plus_a.mult2/mult/use_prim.appDSP[0].bppDSP[0].use_dsp.use_dsp48e1.iDSP48E1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#7 Warning
 Input pipelining  
-DSP reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_COS_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive input reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_COS_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult2_preadder_d_plus_a.mult2/mult/use_prim.appDSP[0].bppDSP[1].use_dsp.use_dsp48e1.iDSP48E1 input reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult2_preadder_d_plus_a.mult2/mult/use_prim.appDSP[0].bppDSP[1].use_dsp.use_dsp48e1.iDSP48E1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#8 Warning
 Input pipelining  
-DSP reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_COS_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive input reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_COS_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult3_preadder_d_minus_a.mult3/mult/use_prim.appDSP[0].bppDSP[0].use_dsp.use_dsp48e1.iDSP48E1 input reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult3_preadder_d_minus_a.mult3/mult/use_prim.appDSP[0].bppDSP[0].use_dsp.use_dsp48e1.iDSP48E1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#9 Warning
 Input pipelining  
-DSP reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_SIN_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive input reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_SIN_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult3_preadder_d_minus_a.mult3/mult/use_prim.appDSP[0].bppDSP[0].use_dsp.use_dsp48e1.iDSP48E1 input reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult3_preadder_d_minus_a.mult3/mult/use_prim.appDSP[0].bppDSP[0].use_dsp.use_dsp48e1.iDSP48E1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#10 Warning
 Input pipelining  
-DSP reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_SIN_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive input reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_SIN_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult3_preadder_d_minus_a.mult3/mult/use_prim.appDSP[0].bppDSP[0].use_dsp.use_dsp48e1.iDSP48E1 input reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult3_preadder_d_minus_a.mult3/mult/use_prim.appDSP[0].bppDSP[0].use_dsp.use_dsp48e1.iDSP48E1/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#11 Warning
+Input pipelining  
+DSP reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult3_preadder_d_minus_a.mult3/mult/use_prim.appDSP[0].bppDSP[1].use_dsp.use_dsp48e1.iDSP48E1 input reciever_i/cmpy_0/U0/i_synth/i_synth/three_mult_structure.use_dsp.i_dsp/mult3_preadder_d_minus_a.mult3/mult/use_prim.appDSP[0].bppDSP[1].use_dsp.use_dsp48e1.iDSP48E1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#12 Warning
+Input pipelining  
+DSP reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/MULT_PI_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive input reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/MULT_PI_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#13 Warning
+Input pipelining  
+DSP reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/S1_COS_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive input reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/S1_COS_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#14 Warning
+Input pipelining  
+DSP reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/S1_COS_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive input reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/S1_COS_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#15 Warning
+Input pipelining  
+DSP reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/S1_SIN_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive input reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/S1_SIN_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#16 Warning
+Input pipelining  
+DSP reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/S1_SIN_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive input reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/S1_SIN_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#17 Warning
+Input pipelining  
+DSP reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_COS_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive input reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_COS_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#18 Warning
+Input pipelining  
+DSP reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_COS_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive input reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_COS_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#19 Warning
+Input pipelining  
+DSP reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_COS_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive input reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_COS_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#20 Warning
+Input pipelining  
+DSP reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_SIN_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive input reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_SIN_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#21 Warning
+Input pipelining  
+DSP reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_SIN_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive input reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_SIN_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#22 Warning
 Input pipelining  
 DSP reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_SIN_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive input reciever_i/dds_compiler_0/U0/i_synth/i_dds/I_SINCOS.i_comp_eff.i_eff/SECOND_ORDER_APPROXIMATION.S2_SIN_U/i_synth_option.i_synth_model/opt_vx7.i_uniwrap/i_primitive/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>

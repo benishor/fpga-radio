@@ -99,6 +99,8 @@ set_property used_in_implementation false [get_files -all /home/benny/work/fpga/
 set_property used_in_implementation false [get_files -all /home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_clk_wiz_0_0/reciever_clk_wiz_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_dds_compiler_0_0/reciever_dds_compiler_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_axis_dwidth_converter_0_0/reciever_axis_dwidth_converter_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_axis_dwidth_converter_1_0/reciever_axis_dwidth_converter_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/ip/reciever_cmpy_0_0/reciever_cmpy_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/reciever_ooc.xdc]
 
 OPTRACE "Adding files" END { }

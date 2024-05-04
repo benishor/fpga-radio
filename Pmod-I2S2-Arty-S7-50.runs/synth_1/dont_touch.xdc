@@ -27,4 +27,10 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==reciever_xl
 # IP: bd/reciever/ip/reciever_phase_provider_0_0/reciever_phase_provider_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==reciever_phase_provider_0_0 || ORIG_REF_NAME==reciever_phase_provider_0_0} -quiet] -quiet
 
+# IP: bd/reciever/ip/reciever_axis_dwidth_converter_1_0/reciever_axis_dwidth_converter_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==reciever_axis_dwidth_converter_1_0 || ORIG_REF_NAME==reciever_axis_dwidth_converter_1_0} -quiet] -quiet
+
+# IP: bd/reciever/ip/reciever_cmpy_0_0/reciever_cmpy_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==reciever_cmpy_0_0 || ORIG_REF_NAME==reciever_cmpy_0_0} -quiet] -quiet
+
 # XDC: /home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/reciever_ooc.xdc
