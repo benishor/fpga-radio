@@ -1,0 +1,8 @@
+0.7
+2020.2
+Oct 13 2023
+20:21:30
+/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/ip/dds_compiler_0/sim/dds_compiler_0.vhd,1714406820,vhdl,,,,dds_compiler_0,,,,,,,,
+/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.srcs/sim_1/new/tb_top.v,1714404913,verilog,,,,tb_top,,,../../../../Pmod-I2S2-Arty-S7-50.ip_user_files/ipstatic,,,,,
+/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.srcs/sources_1/imports/hdl/axis_i2s2.v,1714399099,verilog,,/home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.srcs/sim_1/new/tb_top.v,,axis_i2s2,,,../../../../Pmod-I2S2-Arty-S7-50.ip_user_files/ipstatic,,,,,
