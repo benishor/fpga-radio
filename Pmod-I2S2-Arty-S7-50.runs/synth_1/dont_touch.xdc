@@ -15,19 +15,16 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==reciever_cl
 # IP: bd/reciever/ip/reciever_dds_compiler_0_0/reciever_dds_compiler_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==reciever_dds_compiler_0_0 || ORIG_REF_NAME==reciever_dds_compiler_0_0} -quiet] -quiet
 
-# IP: bd/reciever/ip/reciever_xlconstant_0_0/reciever_xlconstant_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==reciever_xlconstant_0_0 || ORIG_REF_NAME==reciever_xlconstant_0_0} -quiet] -quiet
-
 # IP: bd/reciever/ip/reciever_axis_dwidth_converter_0_0/reciever_axis_dwidth_converter_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==reciever_axis_dwidth_converter_0_0 || ORIG_REF_NAME==reciever_axis_dwidth_converter_0_0} -quiet] -quiet
-
-# IP: bd/reciever/ip/reciever_xlconstant_1_0/reciever_xlconstant_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==reciever_xlconstant_1_0 || ORIG_REF_NAME==reciever_xlconstant_1_0} -quiet] -quiet
 
 # IP: bd/reciever/ip/reciever_xlconstant_1_1/reciever_xlconstant_1_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==reciever_xlconstant_1_1 || ORIG_REF_NAME==reciever_xlconstant_1_1} -quiet] -quiet
 
 # IP: bd/reciever/ip/reciever_xlconstant_1_2/reciever_xlconstant_1_2.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==reciever_xlconstant_1_2 || ORIG_REF_NAME==reciever_xlconstant_1_2} -quiet] -quiet
+
+# IP: bd/reciever/ip/reciever_phase_provider_0_0/reciever_phase_provider_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==reciever_phase_provider_0_0 || ORIG_REF_NAME==reciever_phase_provider_0_0} -quiet] -quiet
 
 # XDC: /home/benny/work/fpga/vivado/i2s2_2/Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever/reciever_ooc.xdc

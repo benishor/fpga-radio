@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x5FE3D644C0AF260B",
+      "boundary_crc": "0x3CB6257CBD064472",
       "device": "xc7s50csga324-1",
       "gen_directory": "../../../../Pmod-I2S2-Arty-S7-50.gen/sources_1/bd/reciever",
       "name": "reciever",
@@ -14,11 +14,10 @@
       "axis_i2s2_0": "",
       "clk_wiz_0": "",
       "dds_compiler_0": "",
-      "xlconstant_0": "",
       "axis_dwidth_converter_0": "",
-      "xlconstant_1": "",
       "xlconstant_2": "",
-      "xlconstant_3": ""
+      "xlconstant_3": "",
+      "phase_provider_0": ""
     },
     "ports": {
       "clk": {
@@ -70,6 +69,11 @@
       },
       "rx_data": {
         "direction": "I"
+      },
+      "btn": {
+        "direction": "I",
+        "left": "1",
+        "right": "0"
       }
     },
     "components": {
@@ -261,21 +265,6 @@
           }
         }
       },
-      "xlconstant_0": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "ip_revision": "8",
-        "xci_name": "reciever_xlconstant_0_0",
-        "xci_path": "ip/reciever_xlconstant_0_0/reciever_xlconstant_0_0.xci",
-        "inst_hier_path": "xlconstant_0",
-        "parameters": {
-          "CONST_VAL": {
-            "value": "3000"
-          },
-          "CONST_WIDTH": {
-            "value": "32"
-          }
-        }
-      },
       "axis_dwidth_converter_0": {
         "vlnv": "xilinx.com:ip:axis_dwidth_converter:1.1",
         "ip_revision": "28",
@@ -293,13 +282,6 @@
             "value": "6"
           }
         }
-      },
-      "xlconstant_1": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "ip_revision": "8",
-        "xci_name": "reciever_xlconstant_1_0",
-        "xci_path": "ip/reciever_xlconstant_1_0/reciever_xlconstant_1_0.xci",
-        "inst_hier_path": "xlconstant_1"
       },
       "xlconstant_2": {
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
@@ -322,6 +304,51 @@
         "parameters": {
           "CONST_VAL": {
             "value": "1"
+          }
+        }
+      },
+      "phase_provider_0": {
+        "vlnv": "xilinx.com:module_ref:phase_provider:1.0",
+        "ip_revision": "1",
+        "xci_name": "reciever_phase_provider_0_0",
+        "xci_path": "ip/reciever_phase_provider_0_0/reciever_phase_provider_0_0.xci",
+        "inst_hier_path": "phase_provider_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "phase_provider",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "btn": {
+            "direction": "I",
+            "left": "1",
+            "right": "0"
+          },
+          "axis_clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "24573991",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "phase": {
+            "direction": "O",
+            "left": "25",
+            "right": "0"
+          },
+          "valid": {
+            "direction": "O"
           }
         }
       }
@@ -400,6 +427,12 @@
           "tx_data"
         ]
       },
+      "btn_0_1": {
+        "ports": [
+          "btn",
+          "phase_provider_0/btn"
+        ]
+      },
       "clk_in1_0_1": {
         "ports": [
           "clk",
@@ -411,7 +444,8 @@
           "clk_wiz_0/clk_out1",
           "axis_i2s2_0/axis_clk",
           "dds_compiler_0/aclk",
-          "axis_dwidth_converter_0/aclk"
+          "axis_dwidth_converter_0/aclk",
+          "phase_provider_0/axis_clk"
         ]
       },
       "dds_compiler_0_m_axis_data_tdata": {
@@ -426,22 +460,22 @@
           "axis_dwidth_converter_0/s_axis_tvalid"
         ]
       },
+      "phase_provider_0_phase": {
+        "ports": [
+          "phase_provider_0/phase",
+          "dds_compiler_0/s_axis_phase_tdata"
+        ]
+      },
+      "phase_provider_0_valid": {
+        "ports": [
+          "phase_provider_0/valid",
+          "dds_compiler_0/s_axis_phase_tvalid"
+        ]
+      },
       "rx_sdin_0_1": {
         "ports": [
           "rx_data",
           "axis_i2s2_0/rx_sdin"
-        ]
-      },
-      "xlconstant_0_dout": {
-        "ports": [
-          "xlconstant_0/dout",
-          "dds_compiler_0/s_axis_phase_tdata"
-        ]
-      },
-      "xlconstant_1_dout": {
-        "ports": [
-          "xlconstant_1/dout",
-          "dds_compiler_0/s_axis_phase_tvalid"
         ]
       },
       "xlconstant_2_dout": {

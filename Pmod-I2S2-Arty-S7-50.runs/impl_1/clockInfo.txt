@@ -1,6 +1,6 @@
 -------------------------------------
 | Tool Version : Vivado v.2023.2
-| Date         : Sat May  4 20:15:32 2024
+| Date         : Sat May  4 21:02:45 2024
 | Host         : acidrain
 | Design       : design_1
 | Device       : xc7s50-csga324-1--

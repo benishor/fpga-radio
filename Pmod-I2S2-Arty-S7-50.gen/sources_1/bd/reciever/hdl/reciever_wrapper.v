@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-//Date        : Sat May  4 20:14:03 2024
+//Date        : Sat May  4 21:00:25 2024
 //Host        : acidrain running 64-bit Ubuntu 24.04 LTS
 //Command     : generate_target reciever_wrapper.bd
 //Design      : reciever_wrapper
@@ -11,7 +11,8 @@
 `timescale 1 ps / 1 ps
 
 module reciever_wrapper
-   (clk,
+   (btn,
+    clk,
     rx_data,
     rx_lrck,
     rx_mclk,
@@ -20,6 +21,7 @@ module reciever_wrapper
     tx_lrck,
     tx_mclk,
     tx_sclk);
+  input [1:0]btn;
   input clk;
   input rx_data;
   output rx_lrck;
@@ -30,6 +32,7 @@ module reciever_wrapper
   output tx_mclk;
   output tx_sclk;
 
+  wire [1:0]btn;
   wire clk;
   wire rx_data;
   wire rx_lrck;
@@ -41,7 +44,8 @@ module reciever_wrapper
   wire tx_sclk;
 
   reciever reciever_i
-       (.clk(clk),
+       (.btn(btn),
+        .clk(clk),
         .rx_data(rx_data),
         .rx_lrck(rx_lrck),
         .rx_mclk(rx_mclk),

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (lin64) Build 4029153 Fri Oct 13 20:13:54 MDT 2023
-| Date             : Sat May  4 20:15:54 2024
+| Date             : Sat May  4 21:03:05 2024
 | Host             : acidrain running 64-bit Ubuntu 24.04 LTS
 | Command          : report_power -file reciever_wrapper_power_routed.rpt -pb reciever_wrapper_power_summary_routed.pb -rpx reciever_wrapper_power_routed.rpx
 | Design           : reciever_wrapper
@@ -53,16 +53,16 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |    <0.001 |        8 |       --- |             --- |
-| Slice Logic    |    <0.001 |      422 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       85 |     32600 |            0.26 |
-|   Register     |    <0.001 |      258 |     65200 |            0.40 |
-|   CARRY4       |    <0.001 |        7 |      8150 |            0.09 |
-|   Others       |     0.000 |       29 |       --- |             --- |
-| Signals        |    <0.001 |      528 |       --- |             --- |
+| Slice Logic    |    <0.001 |      523 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      133 |     32600 |            0.41 |
+|   Register     |    <0.001 |      297 |     65200 |            0.46 |
+|   CARRY4       |    <0.001 |       18 |      8150 |            0.22 |
+|   Others       |     0.000 |       32 |       --- |             --- |
+| Signals        |    <0.001 |      581 |       --- |             --- |
 | Block RAM      |     0.001 |      1.5 |        75 |            2.00 |
 | MMCM           |     0.099 |        1 |         5 |           20.00 |
 | DSPs           |     0.001 |        5 |       120 |            4.17 |
-| I/O            |     0.008 |        8 |       210 |            3.81 |
+| I/O            |     0.008 |       10 |       210 |            4.76 |
 | Static Power   |     0.072 |          |           |                 |
 | Total          |     0.183 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
@@ -91,17 +91,17 @@ Table of Contents
 1.3 Confidence Level
 --------------------
 
-+-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
-| User Input Data             | Confidence | Details                                        | Action                                                                                                     |
-+-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
-| Design implementation state | High       | Design is routed                               |                                                                                                            |
-| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
-| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
-| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
-| Device models               | High       | Device models are Production                   |                                                                                                            |
-|                             |            |                                                |                                                                                                            |
-| Overall confidence level    | Medium     |                                                |                                                                                                            |
-+-----------------------------+------------+------------------------------------------------+------------------------------------------------------------------------------------------------------------+
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                               | Action                                                                                                     |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                      |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                |                                                                                                            |
+| I/O nodes activity          | Medium     | More than 5% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes        | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                          |                                                                                                            |
+|                             |            |                                                       |                                                                                                            |
+| Overall confidence level    | Medium     |                                                       |                                                                                                            |
++-----------------------------+------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
 
 
 2. Settings

@@ -63,3 +63,43 @@
     <Process Command="vivado" Owner="benny" Host="acidrain" Pid="106922" HostCore="8" HostMemory="16249624">
     </Process>
 </ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="benny" Host="acidrain" Pid="115148" HostCore="8" HostMemory="16249624">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="benny" Host="acidrain" Pid="120601" HostCore="8" HostMemory="16249624">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="benny" Host="acidrain" Pid="121122" HostCore="8" HostMemory="16249624">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="benny" Host="acidrain" Pid="123321" HostCore="8" HostMemory="16249624">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="benny" Host="acidrain" Pid="131400" HostCore="8" HostMemory="16249624">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="benny" Host="acidrain" Pid="139083" HostCore="8" HostMemory="16249624">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="benny" Host="acidrain" Pid="146642" HostCore="8" HostMemory="16249624">
+    </Process>
+</ProcessHandle>
+<?xml version="1.0"?>
+<ProcessHandle Version="1" Minor="0">
+    <Process Command="vivado" Owner="benny" Host="acidrain" Pid="153706" HostCore="8" HostMemory="16249624">
+    </Process>
+</ProcessHandle>
